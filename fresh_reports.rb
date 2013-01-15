@@ -49,7 +49,7 @@ class FreshReports
     pages = 1
   
     until page.to_i > pages.to_i do
-      p = @api.payment.list per_page: "100", page: page, date_from: "2012-01-01", date_to: "2012-12-31"
+      p = @api.payment.list per_page: "100", page: page, date_from: "2012-12-01", date_to: "2012-12-31"
       payments = p['payments']
       payment = payments['payment']
     
